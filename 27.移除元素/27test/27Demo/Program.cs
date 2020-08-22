@@ -4,7 +4,7 @@ namespace _27Demo
 {
 	class Program
 	{
-		public static int RemoveElement(int[] nums, int val)
+		static int RemoveElement(int[] nums, int val)
 		{
 			if (nums.Length == 0) return 0;
 			int l = 0, r = nums.Length - 1;
@@ -19,13 +19,14 @@ namespace _27Demo
 			}
 			return r + 1;
 		}
+
 		static void Main()
 		{
 			int[] demonums = new int[] { 2, 2 };
 			int output = RemoveElement(demonums, 3);
 			Console.WriteLine(output);
-			foreach (var item in demonums)
-				Console.Write(item.ToString()+" ");
+			for (int i = 0; i < output; i++)
+				Console.Write(demonums[i].ToString() + " ");
 		}
 	}
 }
