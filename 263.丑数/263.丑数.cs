@@ -11,7 +11,7 @@ public class Solution
 	{
 		if (num <= 0)
 			return false;
-		while ((num & 1) == 0)
+		while ((num & 1) == 0)//num & 1 = num % 2, num & 3 = num % 4 etc.
 			num >>= 1;
 		while (num % 3 == 0)
 			num /= 3;
