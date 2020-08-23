@@ -3,9 +3,8 @@
  *
  * [204] 计数质数
  */
-
-// @lc code=start
 using System.Collections;
+// @lc code=start
 public class Solution
 {
 	public int CountPrimes(int n)
