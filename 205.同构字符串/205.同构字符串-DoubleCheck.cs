@@ -3,10 +3,8 @@
  *
  * [205] 同构字符串
  */
-
-// @lc code=start
 using System.Collections.Generic;
-
+// @lc code=start
 public class Solution
 {
 	public bool IsomorphicTo(string s, string t)
