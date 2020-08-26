@@ -4,7 +4,6 @@
  * [225] 用队列实现栈
  */
 using System.Collections.Generic;
-using System.Security;
 // @lc code=start
 public class MyStack
 {
