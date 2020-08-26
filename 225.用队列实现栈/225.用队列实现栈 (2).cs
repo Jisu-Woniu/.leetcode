@@ -11,27 +11,35 @@ public class MyStack
 	/** Initialize your data structure here. */
 	public MyStack()
 	{
-
+		q = new Queue<int>();
 	}
 
 	/** Push element x onto stack. */
 	public void Push(int x)
 	{
+		Queue<int> qt = new Queue<int>();
+		qt.Enqueue(x);
+		while (q.Count > 0)
+			qt.Enqueue(q.Dequeue());
+		q = qt;
 	}
 
 	/** Removes the element on top of the stack and returns that element. */
 	public int Pop()
 	{
+		return q.Dequeue();
 	}
 
 	/** Get the top element. */
 	public int Top()
 	{
+		return q.Peek();
 	}
 
 	/** Returns whether the stack is empty. */
 	public bool Empty()
 	{
+		return q.Count == 0;
 	}
 }
 
