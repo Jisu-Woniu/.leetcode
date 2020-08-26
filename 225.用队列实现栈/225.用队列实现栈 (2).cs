@@ -7,40 +7,34 @@ using System.Collections.Generic;
 // @lc code=start
 public class MyStack
 {
-	Queue<int> q;
+	Queue<int> q1;
+	Queue<int> q2;
 	/** Initialize your data structure here. */
 	public MyStack()
 	{
-		q = new Queue<int>();
+		q1 = new Queue<int>();
+		q2 = new Queue<int>();
 	}
 
 	/** Push element x onto stack. */
 	public void Push(int x)
 	{
-		Queue<int> qt = new Queue<int>();
-		qt.Enqueue(x);
-		while (q.Count > 0)
-			qt.Enqueue(q.Dequeue());
-		q = qt;
+		q2.Enqueue(x);
+		while (q1.Count > 0)
+			q2.Enqueue(q1.Dequeue());
+		Queue<int> qt = q2;
+		q2 = q1;
+		q1 = qt;
 	}
 
 	/** Removes the element on top of the stack and returns that element. */
-	public int Pop()
-	{
-		return q.Dequeue();
-	}
+	public int Pop() => q1.Dequeue();
 
 	/** Get the top element. */
-	public int Top()
-	{
-		return q.Peek();
-	}
+	public int Top() => q1.Peek();
 
 	/** Returns whether the stack is empty. */
-	public bool Empty()
-	{
-		return q.Count == 0;
-	}
+	public bool Empty() => q1.Count == 0;
 }
 
 /**
