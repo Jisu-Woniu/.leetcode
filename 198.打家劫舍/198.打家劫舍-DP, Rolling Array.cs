@@ -7,25 +7,19 @@ using System;
 // @lc code=start
 public class Solution
 {
-	int n;
-	int[] search;
-	int Search(int[] nums, int start)
-	{
-		int s = start % 4;
-		if (start >= n) return 0;
-		else if (start == n - 1) return nums[s];
-		return Math.Max(
-			nums[start] + search[(s + 2) % 4],
-			nums[start + 1] + search[(s + 3) % 4]
-			);
-	}
 	public int Rob(int[] nums)
 	{
-		n = nums.Length;
-		search = new int[4];
-		for (int i = n + 1; i >= 0; i--)
-			search[i % 4] = Search(nums, i);
-		return search[0];
+		if (nums == null || nums.Length == 0) return 0;
+		int length = nums.Length;
+		if (length == 1) return nums[0];
+		int first = nums[0], second = Math.Max(nums[0], nums[1]);
+		for (int i = 2; i < length; i++)
+		{
+			int temp = second;
+			second = Math.Max(first + nums[i], second);
+			first = temp;
+		}
+		return second;
 	}
 }
 // @lc code=end
