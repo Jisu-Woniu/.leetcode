@@ -12,7 +12,7 @@ public class Solution
 		HashSet<int> hs1 = new HashSet<int>(nums1),
 			hs2 = new HashSet<int>(nums2);
 		hs1.IntersectWith(hs2);
-		int res = new int[hs1.Count];
+		int[] res = new int[hs1.Count];
 		hs1.CopyTo(res);
 		return res;
 	}
