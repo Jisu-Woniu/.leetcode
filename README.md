@@ -1,3 +1,4 @@
 # Jisu-Woniu.leetcode
 My Code for leetcode-cn.com,
-mainly in C#
+currently mainly in C#,
+with special thanks for LeetCode-cn and solution authors.
