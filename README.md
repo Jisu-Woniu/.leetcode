@@ -1,2 +1,3 @@
 # Jisu-Woniu.leetcode
-My Code for leetcode-cn.com
+My Code for leetcode-cn.com,
+mainly in C#
