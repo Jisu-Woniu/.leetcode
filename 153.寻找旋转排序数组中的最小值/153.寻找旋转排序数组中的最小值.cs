@@ -5,23 +5,24 @@
  */
 
 // @lc code=start
-public class Solution {
-    public int FindMin(int[] nums) {
-        int l = 0, r = nums.Length - 1, p = nums[r];
-        while (l < r)
-        {
-            int mid = (l + r) >> 1;
-            if (nums[mid] <= p)
-            {
-                r = mid;
-            }
-            else
-            {
-                l = mid + 1;
-            }
-        }
-        return nums[l];
-    }
+public class Solution
+{
+	public int FindMin(int[] nums)
+	{
+		int l = 0, r = nums.Length - 1, p = nums[r];
+		while (l < r)
+		{
+			int mid = (l + r) >> 1;
+			if (nums[mid] <= p)
+			{
+				r = mid;
+			}
+			else
+			{
+				l = mid + 1;
+			}
+		}
+		return nums[l];
+	}
 }
 // @lc code=end
-
