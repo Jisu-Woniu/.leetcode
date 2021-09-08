@@ -43,7 +43,6 @@ public class Solution
     {
         if (root == null)
             return;
-        // path.Add(root);
         current.Add(root.val);
         if (root.left == null && root.right == null && targetSum == root.val)
             result.Add(current.ToArray());
